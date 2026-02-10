@@ -26,29 +26,33 @@ const ViewBill = React.forwardRef((props, ref) => {
         <div className=' h-[28rem] shadow-lg overflow-y-auto scrollbar-thin'>
             <div ref={ref} className="view-bill p-4 pt-8 bg-white" >
                 {/* Business Information */}
-                
+
                 <div className="flex justify-center relative">
 
                     <div className=''>
                         <img src={billLogo} alt="" className='w-40 ' />
                     </div>
 
-                    <div className='text-center w-full z-20'>
-                        <div className='flex pl-4'>
+                    <div className=' w-full z-20 mt-4'>
+                        <div className='flex items-center'>
+                            <div className=' pl-4'>
 
-                            <div className='flex items-end justify-center '>
-                                <span className='text-4xl font-extrabold pb-2 pr-2'>{businessName?.split(' ')[0]} </span> <h2 className="text-xl font-bold pb-2"> {businessName?.split(' ').slice(1).join(' ')}</h2>
+                                <div className='flex items-end justify-center '>
+                                    <span className='text-4xl font-extrabold pb-2 pr-2'>{businessName?.split(' ')[0]} </span> <h2 className="text-xl font-bold pb-2"> {businessName?.split(' ').slice(1).join(' ')}</h2>
 
+                                </div>
                             </div>
+                            {/* <p className="text-sm ">{bill?.storeAddress}</p> */}
+
                         </div>
-                        {/* <p className="text-sm ">{bill?.storeAddress}</p> */}
                         <p className="text-xs text-left ml-4 "><span className='font-bold'>Phone</span> &#128382;: {bill?.BusinessId?.owner?.mobileno?.map((num, i) => <span className='px-1' key={i}>{num}</span>)} | <span className='font-bold'>Address</span> &#10003;: {bill?.BusinessId?.businessRegion}</p>
-                        <h3 className="text-xl font-bold mt-4 text-left ml-52">{packingSlip ? 'Packing Slip' : 'Sale Invoice'}</h3>
                     </div>
                     <div>
-                        <img className=' right-5 w-40' src={billDesign} alt="" />
+                        <img className=' right-5 h-24 w-96' src={billDesign} alt="" />
                     </div>
+
                 </div>
+                <h3 className="text-xl font-bold text-center mt-2">{packingSlip ? 'Packing Slip' : 'Sale Invoice'}</h3>
 
                 <div className='w-full flex justify-center'><div className='border-b-2 my-5 w-4/5'></div></div>
 
@@ -84,7 +88,7 @@ const ViewBill = React.forwardRef((props, ref) => {
                 {/* Items Section */}
                 <div className="my-6">
                     <table className="w-full border">
-                        <thead className="border-2 border-black">
+                        <thead className="border border-black">
                             <tr>
                                 <th className="text-xs text-left p-2">No.</th>
                                 <th className="text-xs text-left p-2">Item Name</th>
@@ -106,7 +110,7 @@ const ViewBill = React.forwardRef((props, ref) => {
                         </thead>
                         <tbody>
                             {bill?.billItems && bill?.billItems.map((item, index) => (
-                                <tr key={index} className="break-inside-avoid border-2 border-black">
+                                <tr key={index} className="break-inside-avoid border border-black">
                                     <td className="text-xs p-2">{index + 1}</td>
                                     <td className="text-xs p-2">{commonFunction.truncateString(item.productId?.productName, 50)}</td>
                                     <td className="text-xs p-2">{commonFunction.truncateString(item.productId?.companyId?.companyName, 13)}</td>

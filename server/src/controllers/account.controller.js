@@ -12,7 +12,7 @@ import { Product } from "../models/product/product.model.js"
 import { Bill } from "../models/bills/bill.model.js";
 import { Customer } from "../models/customer.model.js";
 import { Supplier } from "../models/supplier.model.js";
-import { sendWhatsappMessage } from "../services/whatsapp.service.js";
+// import { sendWhatsappMessage } from "../services/whatsapp.service.js";
 
 const registerAccount = asyncHandler(async (req, res) => {
 
@@ -870,7 +870,7 @@ Your transaction has been successfully recorded.
 
 _Powered by PANDAS Software_`;
 
-                    await sendWhatsappMessage(mobileNo, whatsappMessage);
+                    // await sendWhatsappMessage(mobileNo, whatsappMessage);
                 }
             }
 
@@ -1027,7 +1027,7 @@ Your transaction has been successfully recorded.
 
 _Powered by PANDAS Software_`;
 
-                    await sendWhatsappMessage(mobileNo, whatsappMessage);
+                    // await sendWhatsappMessage(mobileNo, whatsappMessage);
                 }
             }
 
