@@ -168,7 +168,7 @@ const ViewBill = React.forwardRef((props, ref) => {
                 {!packingSlip &&
                     <div className='grid grid-cols-2 '>
                         <div className='flex justify-start pl-5'>
-                            <img src={paymentQR} alt="" className=' h-32' />
+                            {/* <img src={paymentQR} alt="" className=' h-32' /> */}
                         </div>
                         <div className='flex justify-end pr-5'>
                             <div className=" mb-4 text-l border-2 border-black p-3">
@@ -185,8 +185,8 @@ const ViewBill = React.forwardRef((props, ref) => {
 
                 {!packingSlip &&
                     <div className='mt-3'>
-                        <p className='text-[12px] text-right'>  نوٹ:  کوئی بھی آئیٹم واپس یا تبدیل ہو سکتا ہے بشرطیکہ وہ اپنی اصلی حالت میں ہو اور مکمل پیکنگ میں ہو۔ چائنہ آئیٹمز کی واپسی نہیں ہوگی۔ کسی بھی آئٹم کی واپسی صرف بل یا رسید کی موجودگی میں ہی قابل قبول ہوگی۔ واپسی ۱ مہینہ  کے  اندر  قابل قبول ہو گی اس کے بعد نہیں ہو گی
-                        </p>
+                        {/* <p className='text-[12px] text-right'>  نوٹ:  کوئی بھی آئیٹم واپس یا تبدیل ہو سکتا ہے بشرطیکہ وہ اپنی اصلی حالت میں ہو اور مکمل پیکنگ میں ہو۔ چائنہ آئیٹمز کی واپسی نہیں ہوگی۔ کسی بھی آئٹم کی واپسی صرف بل یا رسید کی موجودگی میں ہی قابل قبول ہوگی۔ واپسی ۱ مہینہ  کے  اندر  قابل قبول ہو گی اس کے بعد نہیں ہو گی
+                        </p> */}
                     </div>
                 }
 

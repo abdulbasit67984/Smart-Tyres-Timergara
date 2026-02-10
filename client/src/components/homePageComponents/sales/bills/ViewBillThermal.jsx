@@ -141,7 +141,7 @@ const ViewBillThermal = React.forwardRef((props, ref) => {
                 }
                 <p className=' text-center text-xs mt-3'>Thank You For Shopping!</p>
                 <div className=''>
-                    <ul className='text-[9px] text-right'>
+                    {/* <ul className='text-[9px] text-right'>
                         <li className='flex flex-row-reverse gap-1 pt-1'>
                             <span>&#8592;</span> کوئی بھی آئیٹم واپس یا تبدیل ہو سکتا ہے بشرطیکہ وہ اپنی اصلی حالت میں ہو اور مکمل پیکنگ میں ہو
                         </li>
@@ -154,10 +154,10 @@ const ViewBillThermal = React.forwardRef((props, ref) => {
                         <li className='flex flex-row-reverse gap-1 pt-1'>
                             <span>&#8592;</span> نوٹ : واپسی ۱ مہینہ  کے  اندر  قابل قبول ہو گی اس کے بعد نہیں ہو گی
                         </li>
-                    </ul>
+                    </ul> */}
                 </div>
                 <div className="flex justify-center my-3">
-                    <img src={paymentQR} alt="" className=' h-32' />
+                    {/* <img src={paymentQR} alt="" className=' h-32' /> */}
                 </div>
 
 
