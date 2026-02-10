@@ -354,13 +354,13 @@ function Header() {
         }
       ]
     },
-    {
-      name: "Whatsapp Settings",
-      slug: `/${primaryPath}/whatsapp`,
-      active: isAdmin() || isOwner() || hasRight("Whatsapp Settings"),
-      isAdmin: isAdmin(),
+    // {
+    //   name: "Whatsapp Settings",
+    //   slug: `/${primaryPath}/whatsapp`,
+    //   active: isAdmin() || isOwner() || hasRight("Whatsapp Settings"),
+    //   isAdmin: isAdmin(),
 
-    },
+    // },
     // {
     //   name: "Calculator",
     //   slug: `/${primaryPath}/calculator`,
