@@ -5,7 +5,7 @@ import commonFunction from '../../../../features/functions';
 import billLogo from '../../../../assets/billLogo.jpeg'
 import paymentQR from '../../../../assets/paymentQR.jpeg'
 
-import billDesign from '../../../../assets/billDesign.svg'
+import billDesign from '../../../../assets/billDesign.jpeg'
 // import { useSelector } from 'react-redux';
 
 // ViewBill component wrapped in forwardRef
@@ -46,7 +46,7 @@ const ViewBill = React.forwardRef((props, ref) => {
                         <h3 className="text-xl font-bold mt-4 text-left ml-52">{packingSlip ? 'Packing Slip' : 'Sale Invoice'}</h3>
                     </div>
                     <div>
-                        <img className='absolute right-0 -bottom-5 h-32 z-10 ' src={billDesign} alt="" />
+                        <img className=' right-5' src={billDesign} alt="" />
                     </div>
                 </div>
 
