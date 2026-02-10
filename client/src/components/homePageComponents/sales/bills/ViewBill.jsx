@@ -46,7 +46,7 @@ const ViewBill = React.forwardRef((props, ref) => {
                         <h3 className="text-xl font-bold mt-4 text-left ml-52">{packingSlip ? 'Packing Slip' : 'Sale Invoice'}</h3>
                     </div>
                     <div>
-                        <img className=' right-5' src={billDesign} alt="" />
+                        <img className=' right-5 w-40' src={billDesign} alt="" />
                     </div>
                 </div>
 
