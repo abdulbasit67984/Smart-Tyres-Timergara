@@ -57,12 +57,12 @@ const ProductSchema = new Schema({
     },
     quantityUnit: {
         type: String,
-        enum: ['pcs', 'cotton', 'box', 'pack', 'kg', 'ton','meter', 'yard','ft'],
+        enum: ['pcs', 'cotton', 'box', 'pack', 'kg', 'ton','meter', 'yard','ft', 'ltr', 'gallon', 'dozen', 'set', 'pair', 'roll', 'sheet'],
         default: 'pcs'
     },
     packUnit: {
         type: String,
-        enum: ['pcs', 'kg', 'grams', 'ft', 'inches', 'cm'],
+        enum: ['pcs', 'kg', 'grams', 'ft', 'inches', 'cm', 'ltr', 'ml', 'pair'],
         default: 'pcs'
     },
     status: {

@@ -38,14 +38,14 @@ const registerSaleReturn = asyncHandler(async (req, res) => {
             let totalPurchasePrice = 0;
             const processedReturnItems = [];
             for (const item of returnItems) {
-                const { productId, quantity, billItemUnit } = item;
+                const { productId, quantity, billItemUnit = 0 } = item;
                 const product = await Product.findById(productId);
                 if (!product) {
                     throw new ApiError(404, `Product not found for ID: ${productId}`);
                 }
                 // console.log('quantity', quantity)
                 // console.log('billItemUnit', billItemUnit)
-                const totalQuantity = (Number(quantity) * Number(product?.productPack)) + Number(billItemUnit)
+                const totalQuantity = (Number(quantity) * Number(product?.productPack)) + Number(billItemUnit || 0)
 
                 // Calculate purchase price for returned items
                 const purchasePrice = await Product.calculatePurchasePriceForReturn(productId, totalQuantity);
@@ -88,11 +88,11 @@ const registerSaleReturn = asyncHandler(async (req, res) => {
 
                 // For each returned item, reduce the quantity in billItems
                 for (const returnItem of returnItems) {
-                    const { productId, quantity, billItemUnit } = returnItem;
+                    const { productId, quantity, billItemUnit = 0 } = returnItem;
 
                     const product = await Product.findById(productId);
 
-                    const totalQuantity = (Number(quantity) * Number(product?.productPack)) + Number(billItemUnit);
+                    const totalQuantity = (Number(quantity) * Number(product?.productPack)) + Number(billItemUnit || 0);
 
                     // console.log('item: ', billId)
                     // console.log('productId: ', productId)
